@@ -1,5 +1,3 @@
-![CSS Grid](https://imgur.com/KfurviO.png)
-
 # Loja UseDev – Página Inicial
 
 Projeto desenvolvido como parte do curso **CSS Grid** da Alura. A proposta original foi expandida e personalizada por mim, aplicando conceitos aprendidos durante o curso e praticando a construção de layouts modernos, organizados e responsivos.
