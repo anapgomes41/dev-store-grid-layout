@@ -49,9 +49,7 @@ Todo o layout foi construído com foco em **estrutura, visual limpo e boa usabil
 
 ## 💻 Como visualizar
 
-1. Clone ou baixe o repositório
-2. Abra o arquivo `index.html` no seu navegador
-3. Ou utilize a extensão **Live Server** no VS Code para visualizar localmente
+https://anapgomes41.github.io/dev-store-grid-layout/
 
 ---
 
