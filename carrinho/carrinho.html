@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carrinho de Compras - Use DEU</title>
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="carrinho.css">
+    </head>
+    <body>
+        <header class="cabecalho">
+            <nav class="cabecalho__nav">
+                <ul class="cabecalho__nav_list">
+                    <li class="cabecalho__nav_list_item-logo">
+                        <h1 class="cabecalho__logo">
+                            <a href="../index.html">
+                                <img src="../assets/icons/logo.svg" alt="Logo UseDev"/>
+                            </a>
+                        </h1>
+                    </li>
+                    <li class="cabecalho__nav_list_item-sobre">
+                        <a href="#" class="cabecalho__nav_list_link">Sobre nós</a>
+                    </li>
+                    <li class="cabecalho__nav_list_item-acoes">
+                        <a href="#" class="cabecalho__nav_list_link cabecalho__nav_list_item-login">Login</a>
+                        <a href="#" class="cabecalho__nav_list_link cabecalho__nav_list_item-perfil">
+                            <img src="../assets/icons/perfil.svg" alt="Ícone de perfil"/>
+                        </a>
+                        <a href="#" class="cabecalho__nav_list_link cabecalho__nav_list_item-carrinho">
+                            <img src="../assets/icons/carrinho.svg" alt="Ícone de carrinho"/>
+                        </a>
+                    </li>
+                    <li class="cabecalho__nav_list_item-input">
+                        <input type="search" id="search" placeholder="O que você procura..." class="cabecalho__nav_list-input">
+                        <div class="campo-pesquisa">
+                            <img src="../assets/icons/search.svg" alt="Ícone de lupa" class="pesquisa-icon"/>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="carrinho-de-compras">
+                <h2>Carrinho de Compras</h2>
+                <p class="aviso-carrinho">
+                    Atenção, os produtos no carrinho não ficam reservados. Finalize a compra para garantir! :)
+                </p>
+                <div class="carrinho-de-compras__conteudo">
+                    <div class="carrinho-de-compras__produtos">
+                        <h3 class="carrinho-de-compras__produtos_titulo">Detalhes da compra</h3>
+                    </div>
+                    <div class="carrinho-de-compras__sumario">
+                        <h3>Sumário</h3>
+                        <div class="carrinho-de-compras__sumario_cupom">
+                            <label for="cupom-desconto">Cupom de desconto</label>
+                            <div class="input-com-botao">
+                                <input type="text" id="cupom-desconto" placeholder="Digite o cupom">
+                                <button class="btn-ok">Ok</button>
+                            </div>
+                        </div>
+                        <div class="carrinho-de-compras__sumario_frete">
+                            <label for="frete-cupom">Frete</label>
+                            <div class="input-com-botao">
+                                <input type="text" id="frete-cupom" placeholder="Digite o cupom">
+                                <button class="btn-ok">Ok</button>
+                            </div>
+                        </div>
+                        <div class="carrinho-de-compras__sumario_detalhes">
+                            <div class="detalhe-linha">
+                                <span id="num-produtos">0 Produtos</span>
+                                <span id="subtotal-produtos">R$ 0,00</span>
+                            </div>
+                            <div class="detalhe-linha">
+                                <span>Frete</span>
+                                <span>R$ <span id="valor-frete">0,00</span></span>
+                            </div>
+                        </div>
+                        <div class="carrinho-de-compras__sumario_total">
+                            <span>Total:</span>
+                            <span id="valor-total-carrinho">R$ 0,00</span>
+                        </div>
+                        <button class="btn-comprar">Continuar comprando</button>
+                        <button class="btn-pagamento">Ir para pagamento</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="rodape">
+            <div class="rodape__linha">
+                <div class="rodape__coluna rodape__coluna_logo">
+                    <img src="../assets/icons/logo-verde.svg" alt="Logo UseDev" />
+                    <p class="rodape__coluna_logo_texto">Hora de abraçar seu lado geek!</p>
+                </div>
+                <div class="rodape__coluna">
+                    <h5 class="rodape__coluna_titulo">Funcionamento</h5>
+                    <ul class="rodape__coluna_list">
+                        <li class="rodape__coluna_list_item">Segunda a Sexta - 8h às 18h</li>
+                        <li class="rodape__coluna_list_item">
+                            <a class="rodape__coluna_link" href="mailto:sac@usedev.com.br">sac@usedev.com.br</a>
+                        </li>
+                        <li class="rodape__coluna_list_item">0800 541 320</li>
+                    </ul>
+                </div>
+                <div class="rodape__coluna">
+                    <h5 class="rodape__coluna_titulo">Institucional</h5>
+                    <ul class="rodape__coluna_list">
+                        <li class="rodape__coluna_list_item"><a href="#">Sobre nós</a></li>
+                        <li class="rodape__coluna_list_item"><a href="#">Contato</a></li>
+                        <li class="rodape__coluna_list_item"><a href="#">Política de Privacidade</a></li>
+                        <li class="rodape__coluna_list_item"><a href="#">LGPD - Lei de proteção de dados</a></li>
+                    </ul>
+                </div>
+                <div class="rodape__coluna">
+                    <h5 class="rodape__coluna_titulo">Informações</h5>
+                    <ul class="rodape__coluna_list">
+                        <li class="rodape__coluna_list_item"><a href="#">Entregas</a></li>
+                        <li class="rodape__coluna_list_item"><a href="#">Garantia</a></li>
+                        <li class="rodape__coluna_list_item"><a href="#">Trocas e devoluções</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rodape__linha rodape__linha_inferior">
+                <div class="rodape__coluna rodape__coluna_pagamento">
+                    <h5 class="rodape__coluna_titulo">Formas de Pagamento</h5>
+                    <ul class="rodape__coluna_list rodape__coluna_list_pagamento">
+                        <li><img src="../assets/icons/icon-cartao-visa.svg" alt="Cartão Visa" /></li>
+                        <li><img src="../assets/icons/icon-cartao-master.svg" alt="Cartão Master" /></li>
+                        <li><img src="../assets/icons/icon-cartao-elo.svg" alt="Cartão Elo" /></li>
+                        <li><img src="../assets/icons/icon-cartao-diners.svg" alt="Cartão Diners" /></li>
+                        <li><img src="../assets/icons/icon-pix.svg" alt="Pix" /></li>
+                    </ul>
+                </div>
+                <div class="rodape__coluna rodape__coluna_redes">
+                    <h5 class="rodape__coluna_titulo">Siga nossas redes:</h5>
+                    <ul class="rodape__coluna_list rodape__coluna_list_redes">
+                        <li><a href="#"><img src="../assets/icons/whatsapp.svg" alt="WhatsApp" /></a></li>
+                        <li><a href="#"><img src="../assets/icons/instagram.svg" alt="Instagram" /></a></li>
+                        <li><a href="#"><img src="../assets/icons/tiktok.svg" alt="TikTok" /></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <script src="carrinho.js"></script>
+    </body>
+</html>

@@ -1,0 +1,106 @@
+.banner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); 
+    align-items: center;
+    padding: 80px 12.5%;
+    background-color: var(--cor-links);
+    background-image: url("../assets/banner-background.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    gap: 56px;
+}
+
+/* Imagem ocupa 5 colunas do grid (do lado esquerdo) */
+.banner__imagem {
+    grid-column: span 5;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Texto ocupa 7 colunas restantes (do lado direito) */
+.banner__container {
+    grid-column: span 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.banner__container-titulo {
+    font-family: var(--fonte-titulo);
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--cor-destaque-principal);
+}
+
+.banner__container-titulo span {
+    color: var(--cor-destaque-secundario);
+}
+
+.banner__container-botao {
+    padding: 16px 32px;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: var(--fonte-texto);
+    color: var(--cor-de-fundo);
+    background-color: var(--cor-fundo-botao);
+    border: none;
+    border-radius: 32px;
+    cursor: pointer;
+    width: fit-content;
+    transition: background-color 0.3s ease;
+}
+
+.banner__container-botao:hover {
+    background-color: var(--cor-destaque-principal); 
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        display: grid;
+        grid-template-columns: 1fr;   
+        align-items: center;     
+        width: 768;
+        height: 942;
+        gap: 24px;
+        padding-top: 60px;
+        padding-right: 60px;
+        padding-bottom: 40px;
+        padding-left: 60px;
+    }
+
+    .banner__container {
+        align-items: center;
+        gap: 8px;
+    }
+
+    .banner__imagem {
+        grid-column: span 12; /* ocupa toda a largura em telas menores */
+        height: 400px; /* ajusta a altura para telas menores */
+        object-fit: cover; /* garante que a imagem ocupe bem o espaço */
+    }
+
+    .banner__container-titulo {
+        font-size: 32px; /* reduz o tamanho do título em telas menores */
+    }
+
+    .banner__container-botao {
+        font-size: 18px; /* reduz o tamanho do botão em telas menores */
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .banner__imagem {
+        height: 400px; 
+        object-fit: cover; /* garante que a imagem ocupe bem o espaço */
+        grid-column: span 12; /* ocupa toda a largura em telas menores */
+    }
+
+    .banner__container {
+        grid-column: span 12; /* ocupa toda a largura em telas menores */
+        text-align: center; 
+    }
+}

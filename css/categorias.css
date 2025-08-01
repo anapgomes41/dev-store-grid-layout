@@ -1,0 +1,125 @@
+.categorias__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 colunas com  espaco de 1fr */
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "roupas roupas decoracao" /* As roupas vao usar 2 colunas e a decoracao uma */
+    "canecas acessorios acessorios";
+    gap: 24px;
+    list-style-type: none;
+}
+
+.categorias__list_item-roupas {
+    grid-area: roupas;
+}
+
+.categorias__list_item-decorcao {
+    grid-area: decoracao;
+}
+
+.categorias__list_item-canecas {
+    grid-area: canecas;
+}
+
+.categorias__list_item-acessorios {
+    grid-area: acessorios;
+}
+
+.categorias__list_item_container img {
+    height: 331px;
+    width: 100%;
+    object-fit: contain; /* Ajusta a imagem para preencher o container */
+}
+
+.categorias__list_item_container {
+    background-color: var(--cor-links);
+    text-align: center;
+}
+
+.categorias__list_item {
+    box-shadow: 0px 4px 24px 0px #7B7B7B26;
+}
+
+.categorias {
+    padding: 60px 11%;
+}
+
+.categorias__titulo {
+    font-size: 32px;
+    line-height: 30px;
+    font-weight: 700;
+    text-align: center;
+    font-family: var(--fonte-titulo);
+    color: var(--texto-principal);
+    margin-bottom: 40px;
+}
+
+.categorias__texto {
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 400;
+    text-align: center;
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto-secundario);
+    margin-bottom: 40px;
+}
+
+.categorias__list_item_titulo {
+    font-size: 31px;
+    font-weight: 700;
+    color: var(--cor-texto-principal);
+    line-height: 37.2px;
+    font-family: var(--fonte-texto);
+    padding: 16px 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .categorias__titulo {
+        margin-bottom: 20px;
+    }
+    
+    .categorias__list_item_titulo {
+        font-size: 25px;
+    }
+
+    .categorias__texto {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .categorias {
+    padding: 50px 11%;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 460px) {
+  .categorias__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "roupas"
+            "decoracao"
+            "canecas"
+            "acessorios";
+        padding: 1px; 
+    }
+
+  .categorias__list_item-roupas {
+        grid-area: roupas;
+    }
+
+  .categorias__list_item-decorcao {
+        grid-area: decoracao;
+    }
+
+  .categorias__list_item-canecas {
+        grid-area: canecas;
+    }
+
+  .categorias__list_item-acessorios {
+        grid-area: acessorios;
+    }
+
+}
+

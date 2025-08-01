@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Detalhes do Produto - Use DEU</title>
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="produtos.css">
+    </head>
+    <body>
+        <header class="cabecalho">
+            <nav class="cabecalho__nav">
+                <ul class="cabecalho__nav_list">
+                    <li class="cabecalho__nav_list_item-logo">
+                        <h1 class="cabecalho__logo">
+                            <a href="../index.html">
+                                <img src="../assets/icons/logo.svg" alt="Logo UseDev"/>
+                            </a>
+                        </h1>
+                    </li>
+                    <li class="cabecalho__nav_list_item-sobre">
+                        <a href="#" class="cabecalho__nav_list_link">Sobre nós</a>
+                    </li>
+                    <li class="cabecalho__nav_list_item-acoes">
+                        <a href="#" class="cabecalho__nav_list_link cabecalho__nav_list_item-login">Login</a>
+                        <a href="#" class="cabecalho__nav_list_link cabecalho__nav_list_item-perfil">
+                            <img src="../assets/icons/perfil.svg" alt="Ícone de perfil"/>
+                        </a>
+                        <a href="../carrinho/carrinho.html" class="cabecalho__nav_list_link cabecalho__nav_list_item-carrinho">
+                            <img src="../assets/icons/carrinho.svg" alt="Ícone de carrinho"/>
+                        </a>
+                    </li>
+                    <li class="cabecalho__nav_list_item-input">
+                        <input type="search" id="search" placeholder="O que você procura..." class="cabecalho__nav_list-input">
+                        <div class="campo-pesquisa">
+                            <img src="../assets/icons/search.svg" alt="Ícone de lupa" class="pesquisa-icon"/>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="secao-detalhes-produto">
+                <h2>Detalhes do Produto</h2>
+                <div class="container-produto-principal">
+                    <div class="produto-imagem">
+                        <img src="../assets/produtos/camiseta.png" alt="Imagem do Produto" id="imagemProdutoPrincipal">
+                    </div>
+                    <div class="produto-detalhes">
+                        <h1 id="nomeProduto">Camiseta</h1>
+                        <p class="descricao" id="descricaoProduto">Camiseta 100% algodão.</p>
+                        <p class="preco" id="precoProduto">R$ 28,00</p>
+                        <div class="opcoes-cor">
+                            <h3>Escolha a cor do tecido</h3>
+                            <div class="opcoes-cor-selecao">
+                                <input type="radio" id="cor-bege" name="cor" value="bege" checked>
+                                <label for="cor-bege" class="cor-swatch"><span class="cor-swatch-bege"></span>Bege</label>
+                                <input type="radio" id="cor-branca" name="cor" value="branca">
+                                <label for="cor-branca" class="cor-swatch"><span class="cor-swatch-branca"></span>Branco</label>
+                                <input type="radio" id="cor-cinza" name="cor" value="cinza">
+                                <label for="cor-cinza" class="cor-swatch"><span class="cor-swatch-cinza"></span>Cinza</label>
+                            </div>
+                        </div>
+                        <div class="opcoes-quantidade">
+                            <h3>Quantidade</h3>
+                            <div class="quantidade-controle">
+                                <button id="btn-diminuir">-</button>
+                                <input type="number" id="quantidade" value="1" min="1">
+                                <button id="btn-aumentar">+</button>
+                            </div>
+                        </div>
+                        <div class="opcoes-tamanho">
+                            <h3>Tamanho</h3>
+                            <select id="tamanho-selecao">
+                                <option value="" disabled selected>Selecione</option>
+                                <option value="p">P</option>
+                                <option value="m">M</option>
+                                <option value="g">G</option>
+                                <option value="gg">GG</option>
+                            </select>
+                        </div>
+                        <div class="opcoes__acoes">
+                            <button id="btn-adicionar-carrinho" class="botao-adicionar-carrinho">Adicionar ao carrinho</button>
+                            <a href="../carrinho/carrinho.html" id="btn-ir-pagamentos" class="botao-adicionar-carrinho botao-secundario">Ir para pagamentos</a>
+                        </div>
+                    </div>
+                    <div class="acoes-usuario">
+                        <img src="../assets/icons/favoritar.svg" alt="Curtir Produto" class="icone-curtir" id="iconeCurtir">
+                        <img src="../assets/icons/compartilhar.svg" alt="Compartilhar Produto" class="icone-compartilhar" id="iconeCompartilhar">
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="rodape">
+            <div class="rodape__linha">
+                <div class="rodape__coluna rodape__coluna_logo">
+                    <img src="../assets/icons/logo-verde.svg" alt="Logo UseDev" />
+                    <p class="rodape__coluna_logo_texto">Hora de abraçar seu lado geek!</p>
+                </div>
+                <div class="rodape__coluna">
+                    <h5 class="rodape__coluna_titulo">Funcionamento</h5>
+                    <ul class="rodape__coluna_list">
+                        <li class="rodape__coluna_list_item">Segunda a Sexta - 8h às 18h</li>
+                        <li class="rodape__coluna_list_item">
+                            <a class="rodape__coluna_link" href="mailto:sac@usedev.com.br">sac@usedev.com.br</a>
+                        </li>
+                        <li class="rodape__coluna_list_item">0800 541 320</li>
+                    </ul>
+                </div>
+                <div class="rodape__coluna">
+                    <h5 class="rodape__coluna_titulo">Institucional</h5>
+                    <ul class="rodape__coluna_list">
+                        <li class="rodape__coluna_list_item"><a href="#">Sobre nós</a></li>
+                        <li class="rodape__coluna_list_item"><a href="#">Contato</a></li>
+                        <li class="rodape__coluna_list_item"><a href="#">Política de Privacidade</a></li>
+                        <li class="rodape__coluna_list_item"><a href="#">LGPD - Lei de proteção de dados</a></li>
+                    </ul>
+                </div>
+                <div class="rodape__coluna">
+                    <h5 class="rodape__coluna_titulo">Informações</h5>
+                    <ul class="rodape__coluna_list">
+                        <li class="rodape__coluna_list_item"><a href="#">Entregas</a></li>
+                        <li class="rodape__coluna_list_item"><a href="#">Garantia</a></li>
+                        <li class="rodape__coluna_list_item"><a href="#">Trocas e devoluções</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rodape__linha rodape__linha_inferior">
+                <div class="rodape__coluna rodape__coluna_pagamento">
+                    <h5 class="rodape__coluna_titulo">Formas de Pagamento</h5>
+                    <ul class="rodape__coluna_list rodape__coluna_list_pagamento">
+                        <li><img src="../assets/icons/icon-cartao-visa.svg" alt="Cartão Visa" /></li>
+                        <li><img src="../assets/icons/icon-cartao-master.svg" alt="Cartão Master" /></li>
+                        <li><img src="../assets/icons/icon-cartao-elo.svg" alt="Cartão Elo" /></li>
+                        <li><img src="../assets/icons/icon-cartao-diners.svg" alt="Cartão Diners" /></li>
+                        <li><img src="../assets/icons/icon-pix.svg" alt="Pix" /></li>
+                    </ul>
+                </div>
+                <div class="rodape__coluna rodape__coluna_redes">
+                    <h5 class="rodape__coluna_titulo">Siga nossas redes:</h5>
+                    <ul class="rodape__coluna_list rodape__coluna_list_redes">
+                        <li><a href="#"><img src="../assets/icons/whatsapp.svg" alt="WhatsApp" /></a></li>
+                        <li><a href="#"><img src="../assets/icons/instagram.svg" alt="Instagram" /></a></li>
+                        <li><a href="#"><img src="../assets/icons/tiktok.svg" alt="TikTok" /></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <div id="notificacao-carrinho" class="notificacao-carrinho">
+            <p>Produto adicionado ao carrinho!</p>
+            <a href="carrinho.html">Ver carrinho</a>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+
+                const btnAdicionarCarrinho = document.getElementById('btn-adicionar-carrinho');
+                const nomeProduto = document.getElementById('nomeProduto');
+                const precoProduto = document.getElementById('precoProduto');
+                const imagemProduto = document.getElementById('imagemProdutoPrincipal');
+                const inputQuantidade = document.getElementById('quantidade');
+                const selectTamanho = document.getElementById('tamanho-selecao');
+                
+                // Elementos da notificação
+                const notificacaoCarrinho = document.getElementById('notificacao-carrinho');
+
+                // Listener para o botão de adicionar ao carrinho
+                btnAdicionarCarrinho.addEventListener('click', () => {
+                    if (selectTamanho.value === '') {
+                        alert('Por favor, selecione um tamanho antes de adicionar ao carrinho.');
+                        return;
+                    }
+
+                    const produto = {
+                        nome: nomeProduto.textContent,
+                        preco: parseFloat(precoProduto.textContent.replace('R$ ', '').replace(',', '.')),
+                        imagemSrc: imagemProduto.src,
+                        quantidade: parseInt(inputQuantidade.value),
+                        tamanho: selectTamanho.value
+                    };
+
+                    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+                    carrinho.push(produto);
+                    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+                    // Mostra a notificação visual
+                    notificacaoCarrinho.classList.add('mostrar');
+                    setTimeout(() => {
+                        notificacaoCarrinho.classList.remove('mostrar');
+                    }, 3000); // A notificação desaparece após 3 segundos
+                });
+
+                // Lógica de quantidade
+                const btnDiminuir = document.getElementById('btn-diminuir');
+                const btnAumentar = document.getElementById('btn-aumentar');
+                
+                btnAumentar.addEventListener('click', () => {
+                    let quantidadeAtual = parseInt(inputQuantidade.value);
+                    inputQuantidade.value = quantidadeAtual + 1;
+                });
+                
+                btnDiminuir.addEventListener('click', () => {
+                    let quantidadeAtual = parseInt(inputQuantidade.value);
+                    if (quantidadeAtual > 1) {
+                        inputQuantidade.value = quantidadeAtual - 1;
+                    }
+                });
+                
+                inputQuantidade.addEventListener('change', () => {
+                    if (parseInt(inputQuantidade.value) < 1 || isNaN(parseInt(inputQuantidade.value))) {
+                        inputQuantidade.value = 1;
+                    }
+                });
+
+                // Lógica do ícone de curtir
+                const iconeCurtir = document.getElementById('iconeCurtir');
+                iconeCurtir.addEventListener('click', () => {
+                    iconeCurtir.classList.toggle('curtido');
+                });
+            });
+        </script>
+    </body>
+</html>

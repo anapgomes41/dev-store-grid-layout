@@ -1,0 +1,335 @@
+:root {
+    --cor-texto-principal: #0B254B;
+    --cor-texto-secundario: #5E6E89;
+    --cor-texto: #EFEFEF;
+    --fonte-texto: "Poppins", sans-serif;
+    --fonte-titulo: "Orbitron", sans-serif;
+
+    --cor-links: #090129;
+
+    --cor-destaque-principal: #FF55DF;
+    --cor-destaque-secundario: #8FFF24;
+
+    --cor-fundo-botao: #780BF7;
+
+    --cor-de-fundo: #FFFFFF;
+}
+
+
+/* Reset básico para box-sizing e margem */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* evita barra horizontal */
+    width: 100%;
+}
+
+/* Cabecalho */
+
+/* ======== DESKTOP ======== */
+.cabecalho {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  box-sizing: border-box;
+  background-color: var(--cor-fundo, #fff);
+}
+
+.cabecalho__nav {
+  width: 100%;
+}
+
+.cabecalho__nav_list {
+  display: grid;
+  grid-template-areas: "logo sobre input acoes";
+  grid-template-columns: auto auto 1fr auto;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* === Logo === */
+.cabecalho__nav_list_item-logo {
+  grid-area: logo;
+}
+
+.cabecalho__logo img {
+  height: 48px;
+}
+
+/* === Sobre nós === */
+.cabecalho__nav_list_item-sobre {
+  grid-area: sobre;
+}
+
+.cabecalho__nav_list_link {
+  font-size: 18px;
+  font-family: var(--fonte-texto);
+  color: var(--cor-links, #333);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* === Campo de busca === */
+.cabecalho__nav_list_item-input {
+  grid-area: input;
+  position: relative;
+  width: 100%;
+}
+
+.cabecalho__nav_list-input {
+  width: 100%;
+  padding: 14px 50px 14px 20px;
+  font-size: 16px;
+  border-radius: 32px;
+  border: none;
+  background-color: var(--cor-input-bg, #f5f5f5);
+  color: var(--cor-links);
+  font-family: var(--fonte-texto);
+  box-sizing: border-box;
+}
+
+.campo-pesquisa {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.pesquisa-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* === Ícones e login === */
+.cabecalho__nav_list_item-acoes {
+  grid-area: acoes;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cabecalho__nav_list_item-login {
+  font-size: 16px;
+}
+
+.cabecalho__nav_list_item-perfil img,
+.cabecalho__nav_list_item-carrinho img {
+  width: 24px;
+  height: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .cabecalho {
+    height: auto;
+    padding: 16px;
+  }
+
+  .cabecalho__nav_list {
+    grid-template-areas:
+      "logo acoes"
+      "input input"
+      "sobre sobre";
+    grid-template-columns: 1fr auto;
+    row-gap: 12px;
+  }
+
+  .cabecalho__logo img {
+    height: 40px;
+  }
+
+  .cabecalho__nav_list_item-input {
+    width: 100%;
+  }
+
+  .cabecalho__nav_list-input {
+    padding: 12px 45px 12px 16px;
+    font-size: 14px;
+    border-radius: 24px;
+  }
+
+  .campo-pesquisa {
+    right: 16px;
+  }
+
+  .cabecalho__nav_list_link {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .cabecalho__nav_list {
+    grid-template-areas:
+      "logo acoes"
+      "input input";
+    grid-template-columns: 1fr auto;
+  }
+
+  .cabecalho__nav_list_item-sobre {
+    display: none;
+  }
+
+  .cabecalho__nav_list_item-login {
+    display: none;
+  }
+
+  .cabecalho__nav_list_input {
+    font-size: 13px;
+  }
+
+  .pesquisa-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+
+/* Rodape*/
+
+.rodape {
+    background-color: var(--cor-links);
+    color: white;
+    padding: 20px 20px;
+    font-family: var(--fonte-texto);
+}
+
+.rodape__linha {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.rodape__coluna_logo img {
+    max-width: 120px;
+    margin-bottom: 12px;
+}
+
+.rodape__coluna_logo_texto {
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+.rodape__coluna_titulo {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.rodape__coluna_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rodape__coluna_list_item {
+    margin-bottom: 8px;
+}
+
+.rodape__coluna_list_item a {
+    text-decoration: none;
+    color: #b3b3b3;
+    font-size: 14px;
+}
+
+.rodape__linha_inferior {
+    border-top: 1.5px solid var(--cor-destaque-secundario);
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.rodape__coluna_list_pagamento,
+.rodape__coluna_list_redes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32px, 1fr));
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rodape__coluna_list_pagamento img,
+.rodape__coluna_list_redes img {
+    max-width: 32px;
+    height: auto;
+}
+
+
+@media screen and (max-width:768px) {
+    .rodape__linha:first-child {
+        display: grid;
+        grid-template-areas:
+        "logo logo logo"
+        "fucionamento institucional informacoes";
+        justify-content: space-between;
+        column-gap: 60px;
+        margin: 60px;
+    }
+
+    .rodape__linha:first-child .rodape__coluna:nth-child(2) {
+        grid-area: fucionamento;
+        margin-bottom: 24px;
+    }
+
+    .rodape__linha:first-child .rodape__coluna:nth-child(3) {
+        grid-area: institucional;
+    }   
+
+    .rodape__linha:first-child .rodape__coluna:nth-child(4) {
+        grid-area: informacoes;
+    }   
+
+    .rodape__linha:first-child .rodape__coluna_logo {
+        grid-area: logo;
+        text-align: center;
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+        border-bottom: 1.5px solid var(--cor-destaque-secundario);
+    }   
+
+    .rodape__linha:last-child {
+        border-top: none;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 500px) {
+    .rodape__linha:first-child {
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 5px;
+        margin: 0;
+    }
+
+    .rodape__coluna_logo img {
+        max-width: 100px;
+    }
+
+    .rodape__coluna_titulo {
+        font-size: 14px;
+    }
+
+    .rodape__coluna_list_item a {
+        font-size: 12px;
+    }
+
+    .rodape__coluna_list_item {
+        font-size: 12px;
+    }
+}
