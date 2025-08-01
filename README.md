@@ -49,7 +49,5 @@ Para explorar o site e testar as funcionalidades do carrinho, siga os passos aba
 
 ## 🔗 Links
 
-* **Link para o projeto online**: [Inserir link do deploy aqui]
-* **Link para o repositório no GitHub**: [Inserir link do seu repositório aqui]
-
+* **Link para o projeto online**: https://anapgomes41.github.io/dev-store-grid-layout/
 ---
